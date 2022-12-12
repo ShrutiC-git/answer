@@ -11,6 +11,10 @@ services:
     image: "${ANSWER_IMAGE}"
     volumes:
       - answer-data:/data
+    deploy:
+      resources:
+        limits:
+          memory: 2000M
 
 volumes:
   answer-data:
