@@ -4,13 +4,11 @@ version: "3"
 x-uffizzi:
   ingress:
     service: answer
-    port: 9080
+    port: 80
 
 services:
   answer:
     image: "${ANSWER_IMAGE}"
-    ports:
-      - '9080:80'
     volumes:
       - answer-data:/data
 
