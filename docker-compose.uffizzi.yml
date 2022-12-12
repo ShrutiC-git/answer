@@ -4,7 +4,7 @@ version: "3"
 x-uffizzi:
   ingress:
     service: answer
-    port: 8081
+    port: 80
 
 services:
   answer:
