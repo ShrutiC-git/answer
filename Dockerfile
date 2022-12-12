@@ -55,5 +55,5 @@ COPY /script/entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
 
 VOLUME /data
-EXPOSE 80
+EXPOSE 8081
 ENTRYPOINT ["/entrypoint.sh"]
