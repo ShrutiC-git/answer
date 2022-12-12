@@ -17,14 +17,15 @@ services:
         limits:
           memory: 4000M
 
-  postgres:
-   image: postgres
+  mysql:
+   image: mysql:latest
    environment:
-     - POSTGRES_USER=postgres
-     - POSTGRES_PASSWORD=postgres
-     - POSTGRES_DB=postgres
+    - MYSQL_DATABASE=answer
+    - MYSQL_ROOT_PASSWORD=password
+    - MYSQL_USER=mysql
+    - MYSQL_PASSWORD=mysql
    volumes:
-      - postgres_data:/var/lib/postgresql
+      - sql_data:/var/lib/mysql
    deploy:
             resources:
               limits:
@@ -32,4 +33,4 @@ services:
 
 volumes:
   answer-data:
-  postgres_data:
+  sql_data:
