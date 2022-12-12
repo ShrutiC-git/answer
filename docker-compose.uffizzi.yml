@@ -1,0 +1,18 @@
+version: "3"
+
+# uffizzi integration
+x-uffizzi:
+  ingress:
+    service: answer
+    port: 9080
+
+services:
+  answer:
+    image: "${ANSWER_IMAGE}"
+    ports:
+      - '9080:80'
+    volumes:
+      - answer-data:/data
+
+volumes:
+  answer-data:
