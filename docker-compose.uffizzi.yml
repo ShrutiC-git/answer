@@ -17,6 +17,15 @@ services:
         limits:
           memory: 4000M
 
+  mail:
+    image: bytemark/smtp
+    restart: always
+    environment:
+      RELAY_HOST: smtp.example.com
+      RELAY_PORT: 587
+      RELAY_USERNAME: alice@example.com
+      RELAY_PASSWORD: secretpassword
+
   mysql:
    image: mysql:latest
    environment:
