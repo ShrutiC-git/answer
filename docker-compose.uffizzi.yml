@@ -21,7 +21,7 @@ services:
     image: bytemark/smtp
     restart: always
     environment:
-      RELAY_HOST: https://pr-4-deployment-8951-answer.app.uffizzi.com/
+      RELAY_HOST: smtp.app.uffizzi.com/
       RELAY_PORT: 587
       RELAY_USERNAME: alice@example.com
       RELAY_PASSWORD: secretpassword
